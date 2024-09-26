@@ -1,0 +1,11 @@
+
+.htaccess
+*.log
+
+.vscode/
+.idea/
+
+*~
+*.swp
+
+db.php   # Add this if you want to avoid pushing your credentials online
