@@ -53,6 +53,7 @@
             <option value="day">Today</option>
             <option value="week">This Week</option>
             <option value="month">This Month</option>
+            <option value="year">This Year</option>
         </select>
         <input type="submit" value="Show Total">
     </form>
@@ -70,6 +71,9 @@
                 break;
             case 'month':
                 $sql = "SELECT SUM(amount) as total FROM expenses WHERE MONTH(date) = MONTH(CURDATE()) AND YEAR(date) = YEAR(CURDATE())";
+                break;
+            case 'year':
+                $sql = "SELECT SUM(amount) as total FROM expenses WHERE YEAR(date) = YEAR(CURDATE());";
                 break;
         }
 
